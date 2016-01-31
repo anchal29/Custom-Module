@@ -1,0 +1,32 @@
+<?php
+
+function contact_me_menu() {
+  return array(
+    'admin/content/contact_me' => array(
+      'title' => 'Contact me submission',
+      'route_name' => 'contact_me_list',
+    ),
+    'admin/content/contact_me/add' => array(
+      'title' => 'Add Contact me submission',
+      'route_name' => 'contact_me_add',
+    ),
+    'admin/content/contact_me/delete/%' => array(
+      'title' => 'Delete Contact me submission',
+      'route_name' => 'contact_me_delete',
+    ),
+  );  
+}
+
+/**
+ * Implements hook_permission().
+ */
+function contact_me_permission(){
+  return array(
+    'manage contact me forms' => array(
+      'title' => t('Manage contact me form submissions'),
+    ),
+    'use contact me form' => array(
+      'title' => t('Use contact me form'),
+    ),
+  );
+}

@@ -1,0 +1,20 @@
+contact_me_list:
+  path: 'admin/content/contact_me'
+  defaults:
+    _content: '\Drupal\contact_me\Controller\AdminController::content'
+  requirements:
+    _permission: 'Manage contact me forms'
+
+contact_me_add:
+  path: 'admin/content/contact_me/add'
+  defaults:
+    _form: '\Drupal\contact_me\AddForm'
+  requirements:
+    _permission: 'Use contact me forms'
+
+contact_me_delete:
+  path: 'admin/content/contact_me/delete/{id}'
+  defaults:
+    _form: '\Drupal\contact_me\DeleteForm'
+  requirements:
+    _permission: 'Manage contact me forms'
