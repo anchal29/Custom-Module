@@ -1,0 +1,5 @@
+name: Block NodeGoto
+description: Redirects to the desired Node
+package: Custom
+type: module
+core: 8.x
